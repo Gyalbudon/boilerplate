@@ -1,0 +1,161 @@
+@@include('@@webRoot/parts/header.html')
+
+<!-- HERO -->
+<div class="hero">
+    <div class="container">
+        <div class="hero__box">
+            <picture class="hero__details">
+                <source media="(max-width: 767px)"
+                    srcset="@@webRoot/assets/img/hero/hero-banner-sp.jpg" alt="---------">
+                <img src="@@webRoot/assets/img/hero/hero-banner.png" alt="--------" loading="lazy"
+                    class="img-fluid" width="" height="">
+            </picture>
+        </div>
+    </div>
+</div>
+
+<!-- MAIN  -->
+
+<main id="main">
+    <!-- SECTION-INQUIRY -->
+    <section class="inquiry" id="area-10">
+        <div class="heading-primary">
+            <div class="container">
+                <h2 class="heading-primary__text">お問い合わせフォーム</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section-inner pb-0">
+                <form action="@@webRoot/confirmation.php" method="post"
+                    enctype="multipart/form-data" class="inquiry-form">
+                    <h3 class="inquiry-form__title">
+                        ただいまご依頼が殺到しております。<br class="d-sm-none">お早めにお問い合わせください。
+                    </h3>
+                    <!-- NAME -->
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <div class="inquiry-form__label-wrapper">
+                                <label for="name" class="inquiry-form__label">お名前</label>
+                                <span class="inquiry-form__state">必須</span>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="hidden" name="氏名[params]" value="名前">
+                            <input type="text" name="氏名[value]" class="form-control" id="name"
+                                placeholder="例）山田 太郎" required>
+                        </div>
+                    </div>
+                    <!-- Company NAME -->
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <div class="inquiry-form__label-wrapper">
+                                <label for="name" class="inquiry-form__label">会社名</label>
+                                <span class="inquiry-form__state">必須</span>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="hidden" name="会社名[params]" value="会社名">
+                            <input type="text" name="会社名[value]" class="form-control" id="name"
+                                placeholder="例）山田 太郎" required>
+                        </div>
+                    </div>
+                    <!-- MAIL ADDRESS -->
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <div class="inquiry-form__label-wrapper">
+                                <label for="email" class="inquiry-form__label">メールアドレス</label>
+                                <span class="inquiry-form__state">必須</span>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="hidden" name="メールアドレス[params]" value="メール">
+                            <input type="email" name="メールアドレス[value]" class="form-control"
+                                id="email" placeholder="例）info@yamada.jp" required>
+                        </div>
+                    </div>
+                    <!-- PHONE NO -->
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <div class="inquiry-form__label-wrapper">
+                                <label for="phone" class="inquiry-form__label">電話番号</label>
+                                <span class="inquiry-form__state">必須</span>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="hidden" name="電話番号[params]" value="電話番号">
+                            <input type="text" name="電話番号[value]"
+                                pattern="^[0-9]{2,4}(-)?[0-9]{2,4}(-)?[0-9]{3,4}$"
+                                class="form-control" id="phone" placeholder="例）03-6264-2650"
+                                required>
+                        </div>
+                    </div>
+                    <!-- TEXTAREA -->
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <div class="inquiry-form__label-wrapper align-items-start">
+                                <label for="textarea" class="inquiry-form__label">お問い合わせ内容</label>
+                                <span class="inquiry-form__state inquiry-form__state--any">任意</span>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="hidden" name="問合せ内容[params]" value="問合せ内容">
+                            <textarea name="問合せ内容[value]" rows="6" class="form-control"
+                                id="textarea" placeholder="お問合わせ内容をご記入ください。"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- <input type="hidden" name="広告情報[value]" class="form-control" id="adsinfo" value="<?php echo "?".$_SERVER['QUERY_STRING']; ?>"> -->
+
+                    <!-- privacy policy -->
+                    <div class="privacy-group row">
+                        <div class="inquiry-form__privacy">
+                            <div class="terms-block">
+                                <h3 class="text-center">個人情報のお取り扱いについて</h3>
+
+                                <h4>事業者の氏名または名称</h4>
+                                <p>ランダムなテキストランダムなテキスト</p>
+
+                                <h4>個人情報保護管理者</h4>
+                                <p>ランダムなテキストランダムなテキストランダムなテキストランダムなテキスト</p>
+
+                                <h4>個人情報の利用目的</h4>
+                                <p>ランダムなテキストランダムなテキストランダムなテキストランダムなテキストランダムなテキスト</p>
+
+                                <h4>個人情報の第三者提供について</h4>
+                                <p>ランダムなテキストランダムなテキストランダムなテキストランダムなテキストランダムなテキスト</p>
+
+                                <h4>個人情報の取扱いの委託について</h4>
+                                <p>ランダムなテキスト
+                                </p>
+                            </div>
+                        </div>
+                        <div class="inquiry-form__btn-wrapper">
+                            <input type="submit" id="submit" value="入力内容の確認"
+                                class="btn inquiry-form__btn">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- MOBILE-BOTTOM-FIXED-CTA -->
+<div class="bottom-nav" id="js-fixedBottomNav">
+    <a href="tel:00-0000-0000"
+        onclick="javascript:goog_report_conversion('tel:00-0000-0000');yahoo_report_conversion(undefined);return false;"
+        class="btn-phone">
+        <span class="btn-phone-top"><img src="@@webRoot/assets/img/phone-icon.svg" alt="phone"
+                class="img-fluid">00-0000-0000</span>
+        <span class="btn-phone-btm">電話受付：0:00～00:00（月～金）</span>
+    </a>
+    <a href="#area-0" class="btn-mail">
+        <img src="@@webRoot/assets/img/mail.svg" alt="mail" class="img-fluid">
+        <div class="btn-mail-text">
+            <p class="btn-mail-text-top">無料相談はこちら</p>
+            <p class="btn-mail-text-btm">メールは24時間受付中</p>
+        </div>
+    </a>
+</div>
+@@include('@@webRoot/parts/footer.html')

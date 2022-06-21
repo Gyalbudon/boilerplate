@@ -1,0 +1,61 @@
+.header {
+    // padding: 0 15px;
+    position: relative;
+    border-top: 4px solid $color-primary;
+    border-bottom: 1px solid $color-primary;
+
+    &__tagline {
+        font-weight: 500;
+        font-size:1.0rem;
+        font-weight: 400;
+        line-height: 17px;
+        padding: 8px 0 14px;
+        color: $color-black;
+
+        @include mq("tablet") {
+            font-size:1.4rem;
+            padding: 15px 0 19px;
+        }
+    }
+
+    &__bottom {
+        padding-bottom: 10px;
+
+        @include mq("tablet") {
+            padding-bottom: 20px;
+        }
+    }
+
+    &__flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    &__logo {
+        width: 130px;
+
+        @include mq("tablet") {
+            width: 200px;
+        }
+
+        @include mq("bootstrap-lg") {
+            width: 206px;
+        }
+    }
+
+    &__btn-group {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+
+        @include mq("tablet") {
+            display: flex;
+            margin-top: 0;
+            margin-left: 15px;
+            align-items: center;
+        }
+    }
+}
